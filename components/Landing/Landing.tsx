@@ -108,17 +108,9 @@ const TitleWrapper = styled.div`
       color: #222a45;
       margin-top: 32px;
       margin-bottom: 4px;
-      max-width: 580px;
+      max-width: 550px;
       line-height: 1.5;
-    }
-    & ul {
       margin-bottom: 40px;
-      list-style: outside;
-      padding-left: 1em;
-      & li {
-        max-width: 580px;
-        line-height: 1.5;
-      }
     }
   }
   & button,
@@ -170,11 +162,10 @@ export const Landing: React.FC<LandingProps> = () => {
               <span>С ДУШОЙ</span>
             </h1>
             <div data-font-size="Focus">
-              <p>Наша сфера деятельности:</p>
-              <ul>
-                <li>Надёжный ремонт ходовой и двигателя, автоэлектрик</li>
-                <li>Ремонт и обслуживание выхлопных систем</li>
-              </ul>
+              <p>
+                Качественное обслуживание ходовой и двигателя. Ремонт выхлопных
+                систем. Устранение проблем с автоэлектрикой.
+              </p>
             </div>
           </div>
           <Button
