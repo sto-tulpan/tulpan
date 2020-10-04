@@ -22,7 +22,7 @@ interface CreditsProps {}
 export const Credits: React.FC<CreditsProps> = React.memo(() => (
   <Link href="http://snelsi.now.sh/" target="_blank" rel="noreferrer noopener">
     Made with
-    <span role="image" aria-label="love">
+    <span role="img" aria-label="love">
       ❤️
     </span>
     <span>by Snelsi</span>

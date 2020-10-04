@@ -101,7 +101,7 @@ export const Owner: React.FC<OwnerProps> = React.memo(() => {
           <br />
           <div>
             более десяти лет{" "}
-            <span role="image" aria-label="Конфети">
+            <span role="img" aria-label="Конфети">
               🎉
             </span>
           </div>
