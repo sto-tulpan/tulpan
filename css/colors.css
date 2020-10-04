@@ -1,0 +1,16 @@
+:root {
+  --color-black: rgba(0, 0, 0, 1);
+  --color-white: rgba(255, 255, 255, 1);
+
+  --color-gray-1: rgba(244, 244, 244, 1);
+  --color-gray-2: rgba(224, 224, 224, 1);
+  --color-gray-4: rgba(168, 168, 168, 1);
+  --color-gray-5: rgba(141, 141, 141, 1);
+
+  --color-red-400: rgba(255, 51, 97, 1);
+  --color-red-500: rgba(255, 0, 57, 1);
+
+  --color-green-400: rgba(55, 210, 133, 1);
+
+  --color-purple-400: rgba(127, 117, 251, 1);
+}
