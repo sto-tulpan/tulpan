@@ -8,14 +8,12 @@ import { Card } from ".";
 
 const levitation = keyframes`
   0% {
-    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
 		transform: translatey(0px);
 	}
 	50% {
-    filter: drop-shadow(0px 25px 10px rgba(0, 0, 0, 0.15));
 		transform: translatey(-20px);
 	}
-	100% {filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+	100% {
 		transform: translatey(0px);
 	}
 `;
@@ -177,7 +175,11 @@ export const Landing: React.FC<LandingProps> = () => {
           </Button>
         </TitleWrapper>
 
-        <img src="images/motor.png" data-visible={visible} />
+        <img
+          src="images/motor.jpg"
+          alt="Мотор Wolksvagen"
+          data-visible={visible}
+        />
       </div>
 
       <Cards data-visible={visible}>
