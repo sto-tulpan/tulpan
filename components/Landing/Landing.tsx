@@ -1,10 +1,12 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
+import Img from "react-optimized-image";
 
 import { scrollTo } from "scripts/scrollTo";
 import { useInView } from "scripts/useInView";
 import { Button } from "components";
 import { Card } from ".";
+import Motor from "./motor.jpg";
 
 const levitation = keyframes`
   0% {
@@ -175,11 +177,7 @@ export const Landing: React.FC<LandingProps> = () => {
           </Button>
         </TitleWrapper>
 
-        <img
-          src="images/motor.jpg"
-          alt="Мотор Wolksvagen"
-          data-visible={visible}
-        />
+        <Img src={Motor} alt="Мотор Wolksvagen" data-visible={visible} webp />
       </div>
 
       <Cards data-visible={visible}>

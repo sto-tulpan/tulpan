@@ -1,10 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
+import Img from "react-optimized-image";
 
 import { scrollTo } from "scripts/scrollTo";
 import { Button } from "components";
 import { Card } from ".";
+import Delorean from "./delorean.png";
 
 const StyledCard = styled(Card)`
   background: linear-gradient(90deg, #4f56e4 0%, #118bd4 100%);
@@ -196,7 +198,7 @@ export const PromoCard: React.FC<PromoCardProps> = React.memo(() => (
             Хочу!
           </Button>
         </div>
-        <img src="delorean.png" alt="Делориан" loading="lazy" />
+        <Img src={Delorean} webp alt="Делориан" loading="lazy" />
       </StyledCard>
     </Tilt>
   </div>

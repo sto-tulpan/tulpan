@@ -66,37 +66,37 @@ export const WhyUs: React.FC<WhyUsProps> = React.memo(() => {
       <div className="grid" ref={ref2} data-visible={visible2}>
         <Card
           bgColor="#ECE9F4"
-          image="images/Cards/car.jpg"
+          image="car.jpg"
           title="Быстро"
           description="Персональное обслуживание в удобное для вас время"
         />
         <Card
           bgColor="#E6F6FF"
-          image="images/Cards/disks.jpg"
+          image="disks.jpg"
           title="Качественно"
           description="Высококлассные мастера с многолетним опытом работы"
         />
         <Card
           bgColor="#ECE7FF"
-          image="images/Cards/components.jpg"
+          image="components.jpg"
           title="Дёшево"
           description="Не нужно переплачивать за обслуживание у официальных диллеров"
         />
         <Card
           bgColor="#EBFAFF"
-          image="images/Cards/pistons.jpg"
+          image="pistons.jpg"
           title="Смарт"
           description="Точечная работа с причинами проблем и их оптимальное решение"
         />
         <Card
           bgColor="#E8F9F2"
-          image="images/Cards/consumables.jpg"
+          image="consumables.jpg"
           title="Большой выбор комплектующих"
           description="Свой импорт деталей из Европы и Китая от более 30 брендов"
         />
         <Card
           bgColor="#F3F1F7"
-          image="images/Cards/wheel.jpg"
+          image="wheel.jpg"
           title="Бонусы постоянным клиентам"
           description="Получайте персональные скидки и приоритет обслуживания"
         />

@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
+import Img from "react-optimized-image";
 
 import { scrollTo } from "scripts/scrollTo";
 
@@ -173,7 +174,7 @@ export const Card: React.FC<CardProps> = React.memo(
       <div>
         <div className="card-icon">
           <div>
-            <img src={imgSrc} alt={alt} />
+            <Img src={require(`./images/${imgSrc}`)} webp alt={alt} />
           </div>
         </div>
         <div className="card-content">

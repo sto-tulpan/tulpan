@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import Img from "react-optimized-image";
 
 interface WrapperProps {
   bgColor?: string;
@@ -65,7 +66,14 @@ export const Card: React.FC<CardProps> = React.memo(
   ({ bgColor = "#ece9f4", image, alt = "", title = "", description = "" }) => (
     <Wrapper bgColor={bgColor}>
       <div className="thumbnail">
-        {image && <img src={image} alt={alt} loading="lazy" />}
+        {image && (
+          <Img
+            src={require(`./images/${image}`)}
+            alt={alt}
+            loading="lazy"
+            webp
+          />
+        )}
       </div>
       <div className="content">
         <h4 data-font-size="X">{title}</h4>

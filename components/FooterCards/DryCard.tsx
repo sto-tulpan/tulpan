@@ -1,10 +1,12 @@
 import * as React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
+import Img from "react-optimized-image";
 
 import { scrollTo } from "scripts/scrollTo";
 import { Button } from "components";
 import { Card } from ".";
+import Cleaner from "./cardry.png";
 
 const StyledCard = styled(Card)`
   background: url(bg_card.png), #000;
@@ -88,8 +90,9 @@ export const DryCard: React.FC<DryCardProps> = React.memo(() => (
             Хочу!
           </Button>
         </div>
-        <img
-          src="cardry.png"
+        <Img
+          src={Cleaner}
+          webp
           alt="Машина чистки высоким давлением"
           loading="lazy"
         />
