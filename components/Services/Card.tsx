@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   padding: 24px;
 
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 78px;
   height: 100%;
   transition: all 0.2s ease-out;
 
