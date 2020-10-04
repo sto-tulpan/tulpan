@@ -33,9 +33,9 @@ const Wrapper = styled.div`
       right: 5vw;
       z-index: -1;
 
-      width: min(40vw, 540px);
+      width: min(40vw, 640px);
       height: auto;
-      top: -48px;
+      top: -12px;
       animation: 10s ${levitation} infinite ease-in-out;
 
       transition: opacity 1.4s ease-in;
