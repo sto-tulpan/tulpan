@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import { useMenuContext } from "components/Phone";
 import { scrollTo } from "scripts/scrollTo";
 
 const Block = styled.div`
@@ -17,7 +18,12 @@ const Block = styled.div`
     font-size: 16px;
     line-height: 22px;
 
-    & a {
+    & a,
+    & button {
+      background: none;
+      border: none;
+      box-shadow: none;
+      cursor: pointer;
       color: inherit;
       text-decoration: none;
       &:hover {
@@ -33,57 +39,64 @@ const Block = styled.div`
 
 interface NavProps {}
 
-export const Nav: React.FC<NavProps> = React.memo(() => (
-  <Block>
-    <h5>Навигация</h5>
+export const Nav: React.FC<NavProps> = React.memo(() => {
+  const { openMenu } = useMenuContext();
 
-    <nav>
-      <ul>
-        <li>
-          <a
-            href="#services"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#services");
-            }}
-          >
-            Наши услуги
-          </a>
-        </li>
-        <li>
-          <a
-            href="#components"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#components");
-            }}
-          >
-            Комплектующие
-          </a>
-        </li>
-        <li>
-          <a
-            href="#whyUs"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#whyUs");
-            }}
-          >
-            Почему мы
-          </a>
-        </li>
-        <li>
-          <a
-            href="#map"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#map");
-            }}
-          >
-            Как добраться
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </Block>
-));
+  return (
+    <Block>
+      <h5>Навигация</h5>
+
+      <nav>
+        <ul>
+          <li>
+            <a
+              href="#services"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo("#services");
+              }}
+            >
+              Наши услуги
+            </a>
+          </li>
+          <li>
+            <a
+              href="#components"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo("#components");
+              }}
+            >
+              Комплектующие
+            </a>
+          </li>
+          <li>
+            <a
+              href="#whyUs"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo("#whyUs");
+              }}
+            >
+              Почему мы
+            </a>
+          </li>
+          <li>
+            <a
+              href="#map"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollTo("#map");
+              }}
+            >
+              Как добраться
+            </a>
+          </li>
+          <li>
+            <button onClick={openMenu}>Контакты</button>
+          </li>
+        </ul>
+      </nav>
+    </Block>
+  );
+});
