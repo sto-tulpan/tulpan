@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   &:hover {
     box-shadow: 0px 22px 44px -9px rgba(80, 80, 140, 0.15);
   }
-  & > div.text {
+  & > div.card-text {
     & > h3 {
       font-style: normal;
       font-weight: 600;
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
       }
     }
   }
-  & > div.icon {
+  & > div.card-icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -50,6 +50,7 @@ const Wrapper = styled.div`
     border-radius: 12px;
 
     & svg {
+      display: block;
       width: 40px;
       height: 40px;
     }
@@ -65,11 +66,11 @@ interface CardProps {
 export const Card: React.FC<CardProps> = React.memo(
   ({ title = "", description = "", icon, ...props }) => (
     <Wrapper {...props}>
-      <div className="text">
+      <div className="card-text">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
-      <div className="icon">{icon}</div>
+      <div className="card-icon">{icon}</div>
     </Wrapper>
   )
 );

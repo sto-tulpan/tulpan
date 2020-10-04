@@ -44,6 +44,7 @@ const Wrapper = styled.div`
 
       @media (max-width: 520px) {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
       }
       & > div:last-child {
         & svg {
