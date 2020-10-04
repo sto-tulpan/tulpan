@@ -9,6 +9,8 @@ const Wrapper = styled.div`
   padding: 24px;
 
   display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr 78px;
   height: 100%;
   transition: all 0.2s ease-out;
@@ -17,6 +19,9 @@ const Wrapper = styled.div`
     box-shadow: 0px 22px 44px -9px rgba(80, 80, 140, 0.15);
   }
   & > div.card-text {
+    display: block;
+    height: 100%;
+
     & > h3 {
       font-style: normal;
       font-weight: 600;
@@ -31,7 +36,6 @@ const Wrapper = styled.div`
       font-size: 18px;
       line-height: 24px;
       margin-top: 12px;
-      margin-bottom: 20px;
       max-width: max(50vw, 420px);
       @media (min-width: 640px) {
         padding-right: 1em;
