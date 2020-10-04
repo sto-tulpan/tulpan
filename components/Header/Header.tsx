@@ -78,7 +78,7 @@ export const Header: React.FC<HeaderProps> = () => {
       <div>
         <nav>
           <h1 className="name" data-font-size="XL" data-font-weight="700">
-            <Link href="/">Тюльпан</Link>
+            <Link href="/">СТО Тюльпан</Link>
           </h1>
         </nav>
         <div>
