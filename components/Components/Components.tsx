@@ -67,25 +67,25 @@ export const Components: React.FC<ComponentsProps> = React.memo(() => {
         </div>
         <div className="grid" ref={ref2} data-visible={visible2}>
           <Card
-            imgSrc="images/Components/turbo.png"
+            imgSrc="images/components/turbo.png"
             title="Глушители"
             description="Только лучшее для вашего автомобиля. Любые формы на заказ."
             footer="От 500 гривен →"
           />
           <Card
-            imgSrc="images/Components/gofra.png"
+            imgSrc="images/components/gofra.png"
             title="Гофры"
             description="Все размеры от производителя. Подгоним на месте."
             footer="От 250 гривен →"
           />
           <Card
-            imgSrc="images/Components/catalyst.png"
+            imgSrc="images/components/catalyst.png"
             title="Катализаторы"
             description="Новые / БУ + Родные аналоги на популярные модели."
             footer="От 4000 гривен →"
           />
           <Card
-            imgSrc="images/Components/parts.png"
+            imgSrc="images/components/parts.png"
             title="Импорт деталей"
             description={
               <>
