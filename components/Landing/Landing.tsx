@@ -78,6 +78,7 @@ const TitleWrapper = styled.div`
       overflow: hidden;
 
       & span {
+        display: block;
         font-size: clamp(24px, 15vw, 100px);
         font-variation-settings: "wght" 750;
         position: relative;
@@ -97,9 +98,9 @@ const TitleWrapper = styled.div`
         background-repeat: repeat-x;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        backface-visibility: hidden;
 
         animation: 20s ${backgroundTransition} linear infinite;
+        overflow: hidden;
       }
     }
 
