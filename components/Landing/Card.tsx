@@ -72,13 +72,21 @@ const StyledCard = styled.div`
       line-height: 32px;
       margin-bottom: 16px;
     }
-    & > p {
+    & > .card-description {
       font-style: normal;
       font-weight: 500;
       font-size: 18px;
       line-height: 26px;
       margin-top: 16px;
       padding-right: 1em;
+      & * {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+    & ul {
+      list-style: outside;
+      padding-left: 1em;
     }
   }
   & > span {
@@ -93,9 +101,9 @@ type Color = "green" | "red" | "purple";
 
 interface CardProps {
   title: string;
-  content: string;
+  content: React.ReactNode | string;
   color: Color;
-  icon: string;
+  icon?: string;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -107,8 +115,8 @@ export const Card: React.FC<CardProps> = ({
   <StyledCard data-color={color}>
     <div>
       <h3>{title}</h3>
-      <p>{content}</p>
+      <div className="card-description">{content}</div>
     </div>
-    <span>{icon}</span>
+    {icon && <span>{icon}</span>}
   </StyledCard>
 );
