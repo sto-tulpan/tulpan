@@ -48,7 +48,7 @@ const Backdrop = styled.div`
   top: 0;
   bottom: 0;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   transition: all 0.25s ease-out;
 
   &:not([data-open="true"]) {

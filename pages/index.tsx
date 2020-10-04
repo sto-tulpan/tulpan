@@ -10,6 +10,7 @@ import {
   Owner,
   FooterCards,
   Footer,
+  Phone,
 } from "components";
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       </main>
 
       <Footer />
+      <Phone />
     </>
   );
 }

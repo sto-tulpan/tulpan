@@ -5,6 +5,7 @@ import { useInView } from "scripts/useInView";
 import { Button } from "components";
 import Link from "next/link";
 
+import { useMenuContext } from "components/Phone";
 import { Schedule, Phone } from ".";
 
 const StyledHeader = styled.header`
@@ -39,7 +40,7 @@ const StyledHeader = styled.header`
       & > a {
         min-height: 48px;
       }
-      & a.phone-link {
+      & .phone-link {
         & span {
           display: flex;
           align-items: center;
@@ -56,7 +57,7 @@ const StyledHeader = styled.header`
           padding: 8px 16px;
           border-radius: 8px;
         }
-        @media (max-width: 420px) {
+        @media (max-width: 520px) {
           & svg {
             margin-right: 0;
           }
@@ -73,6 +74,8 @@ interface HeaderProps {}
 
 export const Header: React.FC<HeaderProps> = () => {
   const { visible, ref } = useInView({ rootMargin: "0px" });
+  const { openMenu } = useMenuContext();
+
   return (
     <StyledHeader ref={ref} data-visible={visible}>
       <div>
@@ -84,7 +87,7 @@ export const Header: React.FC<HeaderProps> = () => {
         <div>
           <Schedule />
           <Phone />
-          <Button as="a" href="tel:+380674666395" className="phone-link">
+          <Button onClick={openMenu} className="phone-link">
             <svg
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

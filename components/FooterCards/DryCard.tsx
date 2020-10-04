@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Tilt from "react-tilt";
 import Img from "react-optimized-image";
 
-import { scrollTo } from "scripts/scrollTo";
 import { Button } from "components";
 import { Card } from ".";
 import Cleaner from "./cardry.png";
@@ -79,14 +78,7 @@ export const DryCard: React.FC<DryCardProps> = React.memo(() => (
             <br />
             салонов
           </div>
-          <Button
-            as="a"
-            href="#map"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#map");
-            }}
-          >
+          <Button as="a" href="tel:+380639368289">
             Хочу!
           </Button>
         </div>

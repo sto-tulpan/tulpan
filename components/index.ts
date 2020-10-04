@@ -11,3 +11,4 @@ export { Owner } from "./Owner";
 export { PhotoGallery } from "./PhotoGallery";
 export { Services } from "./Services";
 export { WhyUs } from "./WhyUs";
+export * from "./Phone";

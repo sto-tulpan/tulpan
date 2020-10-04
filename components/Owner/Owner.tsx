@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { useInView } from "scripts/useInView";
 import { Button } from "components";
+import { useMenuContext } from "components/Phone";
 
 const Wrapper = styled.div`
   padding: 64px min(64px, 6.25vw) 128px;
@@ -74,7 +75,8 @@ const Wrapper = styled.div`
     }
     & .action-button {
       margin-top: 36px;
-      & a {
+      & a,
+      & button {
         margin: auto;
       }
     }
@@ -87,6 +89,7 @@ export const Owner: React.FC<OwnerProps> = React.memo(() => {
   const { visible, ref } = useInView({
     rootMargin: "-300px 0px",
   });
+  const { openMenu } = useMenuContext();
 
   return (
     <Wrapper ref={ref} data-visible={visible}>
@@ -113,7 +116,7 @@ export const Owner: React.FC<OwnerProps> = React.memo(() => {
           проблемы.
         </p>
         <div className="action-button">
-          <Button as="a" href="tel:+38067 466 6395" data-font-size="focus">
+          <Button onClick={openMenu} data-font-size="focus">
             Записаться на диагностику
           </Button>
         </div>
