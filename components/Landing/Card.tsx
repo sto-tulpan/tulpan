@@ -36,7 +36,7 @@ const StyledCard = styled.div`
   overflow: hidden;
   width: 100vw;
 
-  padding: 32px min(32px, 5vw);
+  padding: 32px min(32px, 6.5vw);
 
   cursor: pointer;
   transition: var(--transition-ease);
