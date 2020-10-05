@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useRouter } from "next/router";
 import styled, { createGlobalStyle } from "styled-components";
 
 import { Schedule as FooterSchedule } from "components/Footer/Schedule";
@@ -141,10 +142,15 @@ const Menu = styled.div`
 interface ScheduleProps {}
 
 export const Schedule: React.FC<ScheduleProps> = () => {
-  const [open, setOpen] = React.useState(false);
+  const router = useRouter();
+  const openMenu = () => router.push("/?schedule");
+  const closeMenu = () => router.replace("/");
+
+  const open = router.query["schedule"] === "";
+
   return (
     <Wrapper>
-      <Button onClick={() => setOpen(true)}>
+      <Button onClick={openMenu}>
         <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
             d="M12 23a11 11 0 100-22 11 11 0 000 22z"
@@ -164,7 +170,7 @@ export const Schedule: React.FC<ScheduleProps> = () => {
       </Button>
 
       {open && <LockScroll />}
-      <Backdrop onClick={() => setOpen(false)} data-open={open} />
+      <Backdrop onClick={closeMenu} data-open={open} />
       <Menu data-open={open}>
         <FooterSchedule iconPosition="right" />
       </Menu>
