@@ -50,7 +50,7 @@ const StyledCard = styled.div`
 
   &[data-color="green"] {
     background-color: var(--color-green-400);
-    background-image: linear-gradient(-45deg, #1be2c7 0%, #30e089 100%);
+    background-image: linear-gradient(-45deg, #0cdabe 0%, #30e089 100%);
   }
   &[data-color="red"] {
     background-color: var(--color-red-400);
@@ -78,7 +78,9 @@ const StyledCard = styled.div`
       font-size: 18px;
       line-height: 26px;
       margin-top: 16px;
-      padding-right: 1em;
+      @media (min-width: 420px) {
+        padding-right: 1em;
+      }
       & * {
         font-size: 18px;
         line-height: 26px;
