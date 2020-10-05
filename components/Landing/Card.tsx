@@ -34,7 +34,7 @@ const StyledCard = styled.div`
   min-height: 240px;
   position: relative;
   overflow: hidden;
-  width: 100vw;
+  width: 80vw;
 
   padding: 32px min(32px, 6.5vw);
 
