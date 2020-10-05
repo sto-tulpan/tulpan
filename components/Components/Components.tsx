@@ -70,19 +70,19 @@ export const Components: React.FC<ComponentsProps> = React.memo(() => {
             imgSrc="turbo.png"
             title="Глушители"
             description="Только лучшее для вашего автомобиля. Любые формы на заказ."
-            footer="От 500 гривен →"
+            footer="От 700 гривен →"
           />
           <Card
             imgSrc="gofra.png"
             title="Гофры"
             description="Все размеры от производителя. Подгоним на месте."
-            footer="От 250 гривен →"
+            footer="От 500 гривен →"
           />
           <Card
             imgSrc="catalyst.png"
             title="Катализаторы"
             description="Новые / БУ + Родные аналоги на популярные модели."
-            footer="От 4000 гривен →"
+            footer="От 2500 гривен →"
           />
           <Card
             imgSrc="parts.png"
