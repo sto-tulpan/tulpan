@@ -1,6 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
 
+import { useTime } from "scripts/useTime";
+
 const Block = styled.div`
   & h5 {
     color: #ffffff;
@@ -80,7 +82,7 @@ interface TimeProps {
 }
 
 const Time: React.FC<TimeProps> = ({ day, dayIndex, time, iconPosition }) => {
-  const today = new Date();
+  const today = useTime();
   const currentDay = today.getDay();
 
   return (
