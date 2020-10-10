@@ -38,7 +38,7 @@ export const Brand: React.FC<BrandProps> = React.memo(
   ({ src = "", href = "", alt = "brand logo" }) => (
     <BrandWrapper className="brand">
       <a href={href} target="_blank" rel="noreferrer noopener">
-        <img src={src} alt={alt} />
+        <img src={src} alt={alt} loading="eager" />
       </a>
     </BrandWrapper>
   )
