@@ -34,7 +34,9 @@ const StyledCard = styled.div`
   min-height: 240px;
   position: relative;
   overflow: hidden;
-  width: 80vw;
+  width: 85vw;
+
+  scroll-snap-align: center;
 
   padding: 32px min(32px, 6.5vw);
 
@@ -50,7 +52,7 @@ const StyledCard = styled.div`
 
   &[data-color="green"] {
     background-color: var(--color-green-400);
-    background-image: linear-gradient(-45deg, #0cdabe 0%, #30e089 100%);
+    background-image: linear-gradient(-45deg, #0cdabe 0%, #33d484 100%);
   }
   &[data-color="red"] {
     background-color: var(--color-red-400);

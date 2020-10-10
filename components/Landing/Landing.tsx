@@ -128,6 +128,7 @@ const TitleWrapper = styled.div`
 const Cards = styled.div`
   overflow: auto;
   transition: opacity 1.5s ease-in;
+  scroll-snap-type: x mandatory;
 
   &[data-visible="false"] {
     opacity: 0;
@@ -141,7 +142,7 @@ const Cards = styled.div`
     width: fit-content;
 
     & > div:not(:last-child) {
-      margin-right: 20px;
+      margin-right: min(4vw, 20px);
     }
   }
 `;
