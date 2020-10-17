@@ -2,11 +2,10 @@ import * as React from "react";
 import styled, { keyframes } from "styled-components";
 import Img from "react-optimized-image";
 
-import { scrollTo } from "scripts/scrollTo";
 import { useInView } from "scripts/useInView";
-import { Button } from "components";
 import { Card } from ".";
 import Motor from "./motor.jpg";
+import { Actions } from "./Actions";
 
 const levitation = keyframes`
   0% {
@@ -74,7 +73,7 @@ const TitleWrapper = styled.div`
       font-style: normal;
       font-size: clamp(24px, 11vw, 80px);
       line-height: calc(2px + 2ex + 2px);
-      margin-bottom: 40px;
+      margin-bottom: min(0.5em, 40px);
       overflow: hidden;
 
       & span {
@@ -111,13 +110,14 @@ const TitleWrapper = styled.div`
       max-width: 550px;
       line-height: 1.5;
       margin-bottom: 40px;
+
+      padding-right: 1.5em;
     }
   }
   & button,
   & a {
     border-radius: 16px;
-
-    transition: opacity 1s ease-in;
+    transition: all 0.2s ease-out, opacity 1s ease-in;
 
     &[data-visible="false"] {
       opacity: 0;
@@ -169,18 +169,7 @@ export const Landing: React.FC<LandingProps> = () => {
               </p>
             </div>
           </div>
-          <Button
-            data-font-weight="600"
-            data-visible={visible}
-            as="a"
-            href="#map"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo("#map");
-            }}
-          >
-            Как до нас добраться
-          </Button>
+          <Actions visible={visible} />
         </TitleWrapper>
 
         <Img src={Motor} alt="Мотор Wolksvagen" data-visible={visible} webp />
