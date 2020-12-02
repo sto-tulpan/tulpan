@@ -166,7 +166,7 @@ export const PhoneMenu: React.FC<PhoneMenuProps> = () => (
 
     <div className="messangers">
       <a
-        href="https://telegram.me"
+        href="https://telegram.me/Sto_Tulpan"
         target="_blank"
         rel="noreferrer noopener"
         aria-label="Telegram"
