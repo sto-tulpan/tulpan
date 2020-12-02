@@ -1,5 +1,3 @@
-import Img from "react-optimized-image";
-
 interface Photo {
   src: string;
   width: number;

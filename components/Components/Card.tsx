@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
-import Img from "react-optimized-image";
+import Image from "next/image";
 
 import { scrollTo } from "scripts/scrollTo";
 
@@ -65,7 +65,7 @@ const Wrapper = styled.div`
         cursor: pointer;
 
         position: relative;
-        & img {
+        & > div {
           border: none;
           position: absolute;
           top: 0;
@@ -174,7 +174,15 @@ export const Card: React.FC<CardProps> = React.memo(
       <div>
         <div className="card-icon">
           <div>
-            <Img src={require(`./images/${imgSrc}`)} webp alt={alt} />
+            <div>
+              <Image
+                src={`/images/components/${imgSrc}`}
+                width={620}
+                height={620}
+                alt={alt}
+                loading="eager"
+              />
+            </div>
           </div>
         </div>
         <div className="card-content">

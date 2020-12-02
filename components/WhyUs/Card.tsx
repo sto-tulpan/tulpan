@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
-import Img from "react-optimized-image";
+import Image from "next/image";
 
 interface WrapperProps {
   bgColor?: string;
@@ -18,7 +18,7 @@ const Wrapper = styled.div<WrapperProps>`
     height: 0;
     padding-bottom: 58.35%;
 
-    & img {
+    & > div {
       border: none;
       position: absolute;
       left: 0px;
@@ -67,12 +67,15 @@ export const Card: React.FC<CardProps> = React.memo(
     <Wrapper bgColor={bgColor}>
       <div className="thumbnail">
         {image && (
-          <Img
-            src={require(`./images/${image}`)}
-            alt={alt}
-            loading="lazy"
-            webp
-          />
+          <div>
+            <Image
+              src={`/images/whyUs/${image}`}
+              width={1600}
+              height={934}
+              alt={alt}
+              loading="eager"
+            />
+          </div>
         )}
       </div>
       <div className="content">

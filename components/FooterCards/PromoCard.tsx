@@ -1,11 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
-import Img from "react-optimized-image";
+import Image from "next/image";
 
 import { Button } from "components";
 import { Card } from ".";
-import Delorean from "./delorean.png";
 
 const StyledCard = styled(Card)`
   background: linear-gradient(90deg, #4f56e4 0%, #118bd4 100%);
@@ -36,7 +35,7 @@ const StyledCard = styled(Card)`
       }
     }
   }
-  & img {
+  & .illustration {
     position: absolute;
     right: -48px;
     top: 100px;
@@ -60,7 +59,7 @@ const StyledCard = styled(Card)`
       }
     }
 
-    & img {
+    & .illustration {
       top: 125px;
       right: -56px;
       left: -40px;
@@ -190,7 +189,15 @@ export const PromoCard: React.FC<PromoCardProps> = React.memo(() => (
             Хочу!
           </Button>
         </div>
-        <Img src={Delorean} webp alt="Делориан" loading="lazy" />
+        <div className="illustration">
+          <Image
+            src="/images/footer_cards/delorean.png"
+            width={736}
+            height={421}
+            alt="Делориан"
+            loading="eager"
+          />
+        </div>
       </StyledCard>
     </Tilt>
   </div>

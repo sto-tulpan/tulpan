@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { SRLWrapper } from "simple-react-lightbox";
-import Img from "react-optimized-image";
+import Image from "next/image";
 
 import { useInView } from "scripts/useInView";
 import { photos } from ".";
@@ -43,29 +43,39 @@ const Gallery = styled.div`
       &:hover,
       &:focus {
         filter: unset;
-        & img {
+        & .picture-wrapper {
           transform: scale(1.015);
         }
       }
-      & picture,
-      & img {
-        background-color: #bbb;
-        display: block;
-        object-fit: cover;
-        transition: transform 0.2s cubic-bezier(0.1, -0.02, 0.45, 1.05);
-        height: 100%;
-        width: 100%;
-      }
-
-      & picture {
+      & > div {
         overflow: hidden;
-      }
-      & picture,
-      & img {
-        display: block;
-        object-fit: cover;
         height: 100%;
         width: 100%;
+
+        .picture-wrapper {
+          background-color: #bbb;
+          display: block;
+          object-fit: cover;
+          transition: transform 0.2s cubic-bezier(0.1, -0.02, 0.45, 1.05);
+          height: 100%;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+
+          & > div {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+          }
+
+          & picture,
+          & img {
+            display: block;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
       }
 
       @media (max-width: 768px) {
@@ -122,14 +132,16 @@ export const PhotoGallery: React.FC<PhotoGalleryProps> = React.memo(() => {
         <div>
           {photos.map(({ src, alt, size }) => (
             <div data-size={size} key={src}>
-              <Img
-                src={require(`./images/${src}`)}
-                webp
-                sizes={[400, 800, 1200]}
-                alt={alt}
-                placeholder={require(`./images/${src}?lqip`)}
-                loading="lazy"
-              />
+              <div>
+                <div className="picture-wrapper">
+                  <Image
+                    src={`/images/gallery/${src}`}
+                    alt={alt}
+                    layout="fill"
+                    loading="eager"
+                  />
+                </div>
+              </div>
             </div>
           ))}
         </div>

@@ -1,10 +1,9 @@
 import * as React from "react";
 import styled, { keyframes } from "styled-components";
-import Img from "react-optimized-image";
+import Image from "next/image";
 
 import { useInView } from "scripts/useInView";
 import { Card } from ".";
-import Motor from "./motor.jpg";
 import { Actions } from "./Actions";
 
 const levitation = keyframes`
@@ -27,7 +26,7 @@ const Wrapper = styled.div`
   & > .title {
     display: block;
     position: relative;
-    & img {
+    & .hero {
       position: absolute;
       right: 5vw;
       z-index: -1;
@@ -172,7 +171,15 @@ export const Landing: React.FC<LandingProps> = () => {
           <Actions visible={visible} />
         </TitleWrapper>
 
-        <Img src={Motor} alt="Мотор Wolksvagen" data-visible={visible} webp />
+        <div className="hero" data-visible={visible}>
+          <Image
+            src="/images/motor.jpg"
+            alt="Мотор Wolksvagen"
+            width={865}
+            height={1027}
+            priority
+          />
+        </div>
       </div>
 
       <Cards data-visible={visible}>

@@ -1,11 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
 import Tilt from "react-tilt";
-import Img from "react-optimized-image";
+import Image from "next/image";
 
 import { Button } from "components";
 import { Card } from ".";
-import Cleaner from "./cardry.png";
 
 const StyledCard = styled(Card)`
   background: url(bg_card.png), #000;
@@ -21,7 +20,7 @@ const StyledCard = styled(Card)`
       margin-top: 40px;
     }
   }
-  & img {
+  & .illustration {
     position: absolute;
     right: 0;
     top: 60px;
@@ -35,7 +34,7 @@ const StyledCard = styled(Card)`
         margin-top: 88px;
       }
     }
-    & img {
+    & .illustration {
       top: 120px;
     }
   }
@@ -56,7 +55,7 @@ const StyledCard = styled(Card)`
       }
     }
 
-    & img {
+    & .illustration {
       top: 140px;
       right: 32px;
       left: 48px;
@@ -82,12 +81,15 @@ export const DryCard: React.FC<DryCardProps> = React.memo(() => (
             Хочу!
           </Button>
         </div>
-        <Img
-          src={Cleaner}
-          webp
-          alt="Машина чистки высоким давлением"
-          loading="lazy"
-        />
+        <div className="illustration">
+          <Image
+            src="/images/footer_cards/cardry.png"
+            alt="Машина чистки высоким давлением"
+            width={753}
+            height={800}
+            loading="eager"
+          />
+        </div>
       </StyledCard>
     </Tilt>
   </div>
