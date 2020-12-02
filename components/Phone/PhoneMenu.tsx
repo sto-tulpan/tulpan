@@ -174,7 +174,7 @@ export const PhoneMenu: React.FC<PhoneMenuProps> = () => (
         <TelegramIcon />
       </a>
       <a
-        href="viber://chat?number=380639368289"
+        href="viber://chat?number=%2B380639368289"
         rel="noreferrer noopener"
         aria-label="Viber"
       >
