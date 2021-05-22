@@ -7,7 +7,7 @@ import { Button } from "components";
 import { Card } from ".";
 
 const StyledCard = styled(Card)`
-  background: url(bg_card.png), #000;
+  background: url("bg_card.png"), #000;
   padding: 40px 40px 48px;
 
   & > div.content {

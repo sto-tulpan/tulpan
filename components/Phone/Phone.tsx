@@ -37,16 +37,12 @@ const BgDrop = styled.div`
 
 export const useMenuContext = () => {
   const router = useRouter();
-  const openMenu = () => {
-    router.push("/?modal");
-  };
-  const closeMenu = () => {
-    router.replace("/");
-  };
+  const openMenu = () => router.push("/?modal", "/?modal", { scroll: false });
+  const closeMenu = () => router.replace("/", "/", { scroll: false });
 
   return {
     router,
-    menuOpen: router.query["modal"] === "",
+    menuOpen: router.query.modal === "",
     openMenu,
     closeMenu,
   };

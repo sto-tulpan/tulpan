@@ -1,5 +1,6 @@
 export * from "./buttons";
 
+export { ACBanner } from "./ACBanner";
 export { Brands } from "./Brands";
 export { Components } from "./Components";
 export { Footer } from "./Footer";

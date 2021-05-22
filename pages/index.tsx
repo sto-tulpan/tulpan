@@ -3,6 +3,7 @@ import {
   Landing,
   Services,
   Brands,
+  ACBanner,
   Components,
   WhyUs,
   Map,
@@ -23,6 +24,7 @@ export default function Home() {
         <Services />
         <Brands />
         <Components />
+        <ACBanner />
         <WhyUs />
         <PhotoGallery />
         <Map />

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const StyledCard = styled.div`
   &::before {
-    background: url(/images/dots-small.svg);
+    background: url("/images/dots-small.svg");
     border-top-left-radius: 20%;
     content: "";
     position: absolute;
